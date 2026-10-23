@@ -1,103 +1,731 @@
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pesona Wisata Indonesia | Fadel Muhammad Assami</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Pesona Indonesia</title>
+
 <style>
-:root{--navy:#082b55;--blue:#1676c5;--sky:#eaf6ff;--teal:#19a7a1;--ink:#18324d;--muted:#61758b;--white:#fff}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:#f5faff;line-height:1.65}a{color:inherit;text-decoration:none}.nav{position:sticky;top:0;z-index:5;background:#082b55;color:white;padding:14px 6%;display:flex;justify-content:space-between;align-items:center;gap:12px}.brand{font-weight:800;letter-spacing:.3px}.navlinks{display:flex;gap:18px;font-size:14px}.hero{min-height:480px;padding:80px 7%;display:flex;align-items:center;color:white;background:linear-gradient(90deg,rgba(4,28,57,.88),rgba(4,28,57,.25)),url('https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=1800&q=85') center/cover}.hero-content{max-width:680px}.eyebrow{color:#9de8e2;font-weight:700;text-transform:uppercase;letter-spacing:2px;font-size:13px}.hero h1{font-size:clamp(36px,6vw,64px);line-height:1.08;margin:14px 0}.hero p{font-size:18px;max-width:590px}.btn{display:inline-block;background:#19a7a1;color:#062d4e;padding:12px 20px;border-radius:30px;font-weight:700;margin-top:14px}.section{padding:64px 7%;}.section h2{font-size:32px;color:var(--navy);margin:0 0 10px}.intro{color:var(--muted);max-width:720px;margin:0 0 28px}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.card{background:white;border-radius:18px;overflow:hidden;box-shadow:0 8px 25px #092e5010}.card img{width:100%;height:210px;object-fit:cover;display:block}.card-body{padding:20px}.card h3{margin:0 0 8px;color:var(--navy)}.tag{font-size:12px;color:#087e83;font-weight:800;text-transform:uppercase;letter-spacing:1px}.highlight{background:linear-gradient(135deg,#0a3764,#117f9c);color:white;padding:48px 7%;display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center}.highlight h2{color:white;margin:0 0 10px}.highlight p{margin:0;color:#e0f3ff}.tips{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:25px}.tip{background:#fff;border-radius:14px;padding:20px;border:1px solid #e2eef8}.tip strong{color:var(--navy)}footer{background:#061e3b;color:#d9e9f7;text-align:center;padding:26px 7%;font-size:14px}.small{font-size:13px;color:#a9c5df}
-@media(max-width:760px){.nav{align-items:flex-start;flex-direction:column}.navlinks{flex-wrap:wrap;gap:12px}.hero{min-height:430px;padding:58px 6%}.cards,.highlight,.tips{grid-template-columns:1fr}.section{padding:48px 6%}.card img{height:200px}}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f1f5fb;
+    color: #183153;
+    line-height: 1.7;
+}
+
+/* NAVBAR */
+
+nav {
+    background: #0b2c59;
+    color: white;
+    padding: 18px 6%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.brand {
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+nav ul a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+nav ul a:hover {
+    color: #ffd166;
+}
+
+/* HERO */
+
+.hero {
+    min-height: 450px;
+    padding: 80px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+
+    background:
+    linear-gradient(rgba(0,25,60,.65), rgba(0,25,60,.65)),
+    url("https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=1600&q=80");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    max-width: 750px;
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.btn {
+    display: inline-block;
+    background: #f5b942;
+    color: #183153;
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: #ffd166;
+}
+
+/* SECTION */
+
+.section {
+    padding: 55px 6%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.section-title h2 {
+    font-size: 30px;
+    color: #0b2c59;
+}
+
+.section-title p {
+    color: #607087;
+    margin-top: 8px;
+}
+
+/* CARD */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,.08);
+    transition: transform .3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    background: #dce5ef;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card h3 {
+    color: #0b2c59;
+    font-size: 21px;
+    margin-bottom: 8px;
+}
+
+.location {
+    color: #3975b9;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #526174;
+}
+
+/* TIPS */
+
+.tips {
+    background: white;
+}
+
+.tip-card {
+    background: #f1f5fb;
+    padding: 25px;
+    border-radius: 15px;
+}
+
+.tip-card h3 {
+    margin-bottom: 10px;
+    color: #0b2c59;
+}
+
+/* ABOUT */
+
+.about {
+    background: #0b2c59;
+    color: white;
+    text-align: center;
+}
+
+.about h2 {
+    margin-bottom: 15px;
+}
+
+.about p {
+    max-width: 750px;
+    margin: auto;
+}
+
+/* FOOTER */
+
+footer {
+    background: #061d3b;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+}
+
+@media (max-width: 600px) {
+    nav {
+        padding: 15px 5%;
+    }
+
+    .nav-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        gap: 15px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        min-height: 400px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .section {
+        padding: 40px 5%;
+    }
+}
 </style>
 </head>
+
 <body>
-<nav class="nav"><a class="brand" href="#home">🌏 PESONA INDONESIA</a><div class="navlinks"><a href="#destinasi">Destinasi</a><a href="#budaya">Budaya</a><a href="#tips">Tips Wisata</a><a href="#tentang">Tentang</a></div></nav>
-<header class="hero" id="home"><div class="hero-content"><div class="eyebrow">Explore the beauty of Indonesia</div><h1>Jelajahi Keindahan Wisata Indonesia</h1><p>Dari pantai tropis, pegunungan yang megah, sampai budaya yang beragam—Indonesia punya banyak cerita untuk dijelajahi.</p><a class="btn" href="#destinasi">Temukan Destinasi ↓</a></div></header>
-<section class="section" id="destinasi"><h2>Destinasi Pilihan</h2><p class="intro">Tiga tempat yang bisa jadi inspirasi perjalanan kamu untuk mengenal pesona alam Indonesia.</p><div class="cards">
-<article class="card"><img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=900&q=80" alt="Pura dan pantai di Bali"><div class="card-body"><span class="tag">Pulau Dewata</span><h3>Bali</h3><p>Pantai indah, pura bersejarah, sawah hijau, dan seni budaya yang menjadi daya tarik wisatawan.</p></div></article>
-<article class="card"><img src="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&w=900&q=80" alt="Pemandangan Raja Ampat"><div class="card-body"><span class="tag">Surga Bahari</span><h3>Raja Ampat</h3><p>Kepulauan dengan laut jernih, gugusan karst, dan kekayaan bawah laut yang menakjubkan.</p></div></article>
-<article class="card"><img src="https://images.unsplash.com/photo-1584810359583-96fc3effe7b6?auto=format&fit=crop&w=900&q=80" alt="Candi Borobudur"><div class="card-body"><span class="tag">Warisan Sejarah</span><h3>Borobudur</h3><p>Candi megah di Magelang yang menyimpan nilai sejarah, arsitektur, dan warisan budaya Indonesia.</p></div></article>
-</div></section>
-  
-<section class="section" id="budaya">
-  <h2>Wisata Budaya Indonesia</h2>
-  <p>Jelajahi keindahan budaya, tradisi, dan sejarah Indonesia.</p>
 
-  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;">
+<!-- NAVBAR -->
 
-    <article class="card">
-      <img src="https://images.unsplash.com/photo-1596402184320-417e7178b2cd?auto=format&fit=crop&w=800&q=80">
-      <h3>Candi Borobudur</h3>
-      <p>Magelang, Jawa Tengah</p>
-      <p>Candi Buddha bersejarah dengan relief yang menceritakan perjalanan kehidupan dan ajaran Buddha.</p>
-    </article>
+<nav>
+    <div class="nav-container">
 
-    <article class="card">
-      <img src="https://images.unsplash.com/photo-1603262110263-fb0112e7cc33?auto=format&fit=crop&w=800&q=80" alt="Candi Prambanan" style="width:100%;height:200px;object-fit:cover;">
-      <h3>Candi Prambanan</h3>
-      <p>Yogyakarta</p>
-      <p>Kompleks candi Hindu yang terkenal dengan arsitektur megah dan kisah Ramayana.</p>
-    </article>
+        <a href="#home" class="brand">
+            🌍 PESONA INDONESIA
+        </a>
 
-    <article class="card">
-      <img src="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&w=800&q=80" alt="Desa adat Penglipuran" style="width:100%;height:200px;object-fit:cover;">
-      <h3>Desa Penglipuran</h3>
-      <p>Bali</p>
-      <p>Desa adat yang terkenal dengan kebersihan, tata ruang tradisional, dan budaya Bali.</p>
-    </article>
+        <ul>
+            <li><a href="#destinasi">Destinasi</a></li>
+            <li><a href="#budaya">Budaya</a></li>
+            <li><a href="#tips">Tips Wisata</a></li>
+            <li><a href="#tentang">Tentang</a></li>
+        </ul>
 
-    <article class="card">
-      <img src="https://images.unsplash.com/photo-1516690561799-46d8f74f9abf?auto=format&fit=crop&w=800&q=80" alt="Rumah adat Toraja" style="width:100%;height:200px;object-fit:cover;">
-      <h3>Tana Toraja</h3>
-      <p>Sulawesi Selatan</p>
-      <p>Daerah dengan rumah adat Tongkonan dan tradisi masyarakat yang masih terjaga.</p>
-    </article>
+    </div>
+</nav>
 
-    <article class="card">
-      <img src="https://images.unsplash.com/photo-1596422846543-75c6fc197f07?auto=format&fit=crop&w=800&q=80">
-      <h3>Rumah Gadang</h3>
-      <p>Sumatera Barat</p>
-      <p>Rumah adat Minangkabau dengan atap khas dan nilai budaya yang kuat.</p>
-    </article>
+<!-- HERO -->
 
-    <article class="card">
-      <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=800&q=80" alt="Ubud Bali" style="width:100%;height:200px;object-fit:cover;">
-      <h3>Ubud</h3>
-      <p>Bali</p>
-      <p>Pusat seni, tari tradisional, kerajinan, dan kehidupan budaya Bali.</p>
-    </article>
+<header class="hero" id="home">
 
-    <article class="card">
-      <img src="https://images.unsplash.com/photo-1599687267812-35c4a2f5a9f3?auto=format&fit=crop&w=800&q=80" alt="Keraton Yogyakarta" style="width:100%;height:200px;object-fit:cover;">
-      <h3>Keraton Yogyakarta</h3>
-      <p>Yogyakarta</p>
-      <p>Istana Kesultanan yang menjadi pusat kebudayaan dan tradisi Jawa.</p>
-    </article>
+    <div class="hero-content">
 
-    <article class="card">
-      <img src="https://images.unsplash.com/photo-1533929736458-ca588d08c8be?auto=format&fit=crop&w=800&q=80">
-      <h3>Kota Tua</h3>
-      <p>Jakarta</p>
-      <p>Kawasan bersejarah dengan bangunan peninggalan masa kolonial Belanda.</p>
-    </article>
+        <h1>Jelajahi Keindahan Indonesia</h1>
 
-    <article class="card">
-      <img src="https://images.unsplash.com/photo-1577717903315-1691ae25ab3f?auto=format&fit=crop&w=800&q=80" alt="Desa Wae Rebo" style="width:100%;height:200px;object-fit:cover;">
-      <h3>Desa Wae Rebo</h3>
-      <p>Flores, Nusa Tenggara Timur</p>
-      <p>Desa adat di pegunungan dengan rumah tradisional berbentuk kerucut.</p>
-    </article>
+        <p>
+            Temukan pesona alam, kekayaan budaya,
+            dan destinasi wisata Indonesia yang
+            menakjubkan.
+        </p>
 
-    <article class="card">
-      <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=800&q=80">
-      <h3>Pura Besakih</h3>
-      <p>Bali</p>
-      <p>Pura terbesar di Bali yang menjadi pusat kegiatan keagamaan Hindu.</p>
-    </article>
+        <a href="#destinasi" class="btn">
+            Jelajahi Sekarang
+        </a>
 
-  </div>
+    </div>
+
+</header>
+
+<!-- DESTINASI -->
+
+<section class="section" id="destinasi">
+
+    <div class="section-title">
+
+        <h2>Destinasi Wisata Indonesia</h2>
+
+        <p>
+            Jelajahi berbagai tempat wisata
+            menarik dari seluruh Indonesia.
+        </p>
+
+    </div>
+
+    <div class="grid">
+
+        <article class="card">
+
+            <img
+            src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=900&q=80"
+            alt="Keindahan Bali"
+            loading="lazy">
+
+            <div class="card-content">
+
+                <h3>Bali</h3>
+
+                <p class="location">Bali</p>
+
+                <p>
+                    Pulau yang terkenal dengan
+                    pantai indah, budaya,
+                    dan keindahan alamnya.
+                </p>
+
+            </div>
+
+        </article>
+
+        <article class="card">
+
+            <img
+            src="https://images.unsplash.com/photo-1584810359583-96fc3448beaa?auto=format&fit=crop&w=900&q=80"
+            alt="Candi Borobudur"
+            loading="lazy">
+
+            <div class="card-content">
+
+                <h3>Candi Borobudur</h3>
+
+                <p class="location">Magelang, Jawa Tengah</p>
+
+                <p>
+                    Candi Buddha bersejarah
+                    yang menjadi salah satu
+                    warisan budaya Indonesia.
+                </p>
+
+            </div>
+
+        </article>
+
+        <article class="card">
+
+            <img
+            src="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&w=900&q=80"
+            alt="Raja Ampat"
+            loading="lazy">
+
+            <div class="card-content">
+
+                <h3>Raja Ampat</h3>
+
+                <p class="location">Papua Barat Daya</p>
+
+                <p>
+                    Destinasi wisata laut
+                    dengan pemandangan pulau
+                    dan keindahan bawah laut.
+                </p>
+
+            </div>
+
+        </article>
+
+        <article class="card">
+
+            <img
+            src="https://images.unsplash.com/photo-1516690561799-46d8f74f9abf?auto=format&fit=crop&w=900&q=80"
+            alt="Gunung Bromo"
+            loading="lazy">
+
+            <div class="card-content">
+
+                <h3>Gunung Bromo</h3>
+
+                <p class="location">Jawa Timur</p>
+
+                <p>
+                    Gunung dengan pemandangan
+                    matahari terbit dan
+                    lautan pasir yang indah.
+                </p>
+
+            </div>
+
+        </article>
+
+        <article class="card">
+
+            <img
+            src="https://images.unsplash.com/photo-1516690561799-46d8f74f9abf?auto=format&fit=crop&w=900&q=80"
+            alt="Pegunungan Indonesia"
+            loading="lazy">
+
+            <div class="card-content">
+
+                <h3>Danau Toba</h3>
+
+                <p class="location">Sumatera Utara</p>
+
+                <p>
+                    Danau vulkanik yang terkenal
+                    dengan panorama alam
+                    dan budaya Batak.
+                </p>
+
+            </div>
+
+        </article>
+
+        <article class="card">
+
+            <img
+            src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80"
+            alt="Pemandangan alam Indonesia"
+            loading="lazy">
+
+            <div class="card-content">
+
+                <h3>Ubud</h3>
+
+                <p class="location">Bali</p>
+
+                <p>
+                    Pusat seni, tari tradisional,
+                    kerajinan, dan kehidupan
+                    budaya Bali.
+                </p>
+
+            </div>
+
+        </article>
+
+    </div>
+
 </section>
 
-<section class="section" id="tips"><h2>Tips Wisata Bertanggung Jawab</h2><p class="intro">Supaya perjalanan nyaman sekaligus menjaga tempat yang kita kunjungi.</p><div class="tips"><div class="tip"><strong>01 · Rencanakan perjalanan</strong><p>Cek cuaca, transportasi, biaya, dan aturan destinasi sebelum berangkat.</p></div><div class="tip"><strong>02 · Jaga kebersihan</strong><p>Bawa kembali sampah dan kurangi penggunaan plastik sekali pakai.</p></div><div class="tip"><strong>03 · Hormati budaya lokal</strong><p>Patuhi aturan, berpakaian sesuai tempat, dan hargai adat masyarakat setempat.</p></div></div></section>
-<section class="section" id="tentang" style="background:#eaf6ff"><h2>Tentang Website</h2><p class="intro">Website wisata Indonesia ini dibuat oleh <strong>Fadel Muhammad Assami</strong> sebagai proyek ICT untuk memperkenalkan keindahan alam dan budaya Indonesia. Semoga bisa menjadi inspirasi untuk menjelajahi Nusantara dan menjaga kekayaan negeri kita.</p><p><strong>Universitas:</strong> Universitas Negeri Jakarta<br><strong>Program Studi:</strong> Pendidikan Pancasila dan Kewarganegaraan<br><strong>NIM:</strong> 1401625128</p></section>
-<footer>© 2026 Pesona Wisata Indonesia · Website ICT oleh Fadel Muhammad Assami<br><span class="small">Mari jelajahi Indonesia dan jaga keindahannya.</span></footer>
-</body></html>
+<!-- BUDAYA -->
+
+<section class="section" id="budaya">
+
+    <div class="section-title">
+
+        <h2>Wisata Budaya Indonesia</h2>
+
+        <p>
+            Jelajahi keindahan budaya,
+            tradisi, dan sejarah Indonesia.
+        </p>
+
+    </div>
+
+    <div class="grid">
+
+        <article class="card">
+
+            <img
+            src="https://images.unsplash.com/photo-1584810359583-96fc3448beaa?auto=format&fit=crop&w=900&q=80"
+            alt="Candi Borobudur"
+            loading="lazy">
+
+            <div class="card-content">
+
+                <h3>Candi Borobudur</h3>
+
+                <p class="location">
+                    Magelang, Jawa Tengah
+                </p>
+
+                <p>
+                    Candi Buddha bersejarah
+                    dengan relief yang
+                    menceritakan perjalanan
+                    kehidupan dan ajaran Buddha.
+                </p>
+
+            </div>
+
+        </article>
+
+        <article class="card">
+
+            <img
+            src="https://images.unsplash.com/photo-1596402184320-417e7178b2cd?auto=format&fit=crop&w=900&q=80"
+            alt="Candi Prambanan"
+            loading="lazy">
+
+            <div class="card-content">
+
+                <h3>Candi Prambanan</h3>
+
+                <p class="location">Yogyakarta</p>
+
+                <p>
+                    Kompleks candi Hindu
+                    yang terkenal dengan
+                    arsitektur megah dan
+                    kisah Ramayana.
+                </p>
+
+            </div>
+
+        </article>
+
+        <article class="card">
+
+            <img
+            src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=900&q=80"
+            alt="Pura Besakih"
+            loading="lazy">
+
+            <div class="card-content">
+
+                <h3>Pura Besakih</h3>
+
+                <p class="location">Karangasem, Bali</p>
+
+                <p>
+                    Kompleks pura yang menjadi
+                    pusat kegiatan keagamaan
+                    Hindu di Bali.
+                </p>
+
+            </div>
+
+        </article>
+
+        <article class="card">
+
+            <img
+            src="https://images.unsplash.com/photo-1596402184320-417e7178b2cd?auto=format&fit=crop&w=900&q=80"
+            alt="Keraton Yogyakarta"
+            loading="lazy">
+
+            <div class="card-content">
+
+                <h3>Keraton Yogyakarta</h3>
+
+                <p class="location">Yogyakarta</p>
+
+                <p>
+                    Istana Kesultanan yang
+                    menjadi pusat kebudayaan
+                    dan tradisi Jawa.
+                </p>
+
+            </div>
+
+        </article>
+
+        <article class="card">
+
+            <img
+            src="https://images.unsplash.com/photo-1596402184320-417e7178b2cd?auto=format&fit=crop&w=900&q=80"
+            alt="Rumah Gadang"
+            loading="lazy">
+
+            <div class="card-content">
+
+                <h3>Rumah Gadang</h3>
+
+                <p class="location">Sumatera Barat</p>
+
+                <p>
+                    Rumah adat Minangkabau
+                    dengan bentuk atap khas
+                    dan nilai budaya yang kuat.
+                </p>
+
+            </div>
+
+        </article>
+
+        <article class="card">
+
+            <img
+            src="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?auto=format&fit=crop&w=900&q=80"
+            alt="Kota Tua"
+            loading="lazy">
+
+            <div class="card-content">
+
+                <h3>Kota Tua</h3>
+
+                <p class="location">Jakarta</p>
+
+                <p>
+                    Kawasan bersejarah
+                    dengan bangunan peninggalan
+                    masa kolonial Belanda.
+                </p>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+<!-- TIPS -->
+
+<section class="section tips" id="tips">
+
+    <div class="section-title">
+
+        <h2>Tips Wisata</h2>
+
+        <p>
+            Persiapkan perjalanan agar
+            lebih nyaman dan menyenangkan.
+        </p>
+
+    </div>
+
+    <div class="grid">
+
+        <div class="tip-card">
+
+            <h3>🎒 Persiapkan Barang</h3>
+
+            <p>
+                Bawa pakaian, obat pribadi,
+                perlengkapan, dan kebutuhan
+                sesuai tempat wisata.
+            </p>
+
+        </div>
+
+        <div class="tip-card">
+
+            <h3>📍 Cari Informasi</h3>
+
+            <p>
+                Pelajari lokasi, akses,
+                cuaca, dan aturan
+                tempat wisata sebelum berangkat.
+            </p>
+
+        </div>
+
+        <div class="tip-card">
+
+            <h3>🌱 Jaga Lingkungan</h3>
+
+            <p>
+                Jangan membuang sampah
+                sembarangan dan tetap
+                menjaga kebersihan tempat wisata.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- TENTANG -->
+
+<section class="section about" id="tentang">
+
+    <h2>Tentang Pesona Indonesia</h2>
+
+    <p>
+        Pesona Indonesia merupakan website
+        informasi wisata yang memperkenalkan
+        berbagai destinasi, kekayaan budaya,
+        dan keindahan alam Indonesia.
+        Website ini dibuat untuk membantu
+        masyarakat mengenal serta
+        menjelajahi wisata Indonesia.
+    </p>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+    <p>
+        © 2026 Pesona Indonesia
+    </p>
+
+    <p>
+        Jelajahi keindahan dan budaya
+        Indonesia.
+    </p>
+
+</footer>
+
+</body>
+</html>
